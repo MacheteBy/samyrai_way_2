@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let word_0 = "Wassup";
+        let word_1 = "Bye";
+        let word_2 = "Programmer";
+
+        let word_translate_0 = "Здарова";
+        let word_translate_1 = "Пока";
+        let word_translate_2 = "Программист";
+
+        const goodResault = "Молодец";
+        const badResault = "Старайся лучше";
+
+        let correctAnswersCount = 0;
+        let WordsCount = 3;
+        const goodResaultPersent = 50;
+        
+        
+        const resault_0 = window.prompt(`Введите перевод: ${word_0}` + '<br>');
+        alert(word_translate_0 === resault_0);
+        if (word_translate_0 === resault_0) {
+            correctAnswersCount++;
+        }
+        
+        const resault_1 = window.prompt(`Введите перевод: ${word_1}<br>`);
+        alert(word_translate_1 === resault_1);
+        if (word_translate_1 === resault_1) {
+            correctAnswersCount++;
+        }
+
+        const resault_2 = window.prompt(`Введите перевод: ${word_2}<br>`);
+        alert(word_translate_2 === resault_2);
+        if (word_translate_2 === resault_2) {
+            correctAnswersCount++;
+        }
+
+        
+        const userAnswerCorrect = correctAnswersCount / WordsCount * 100
+        if(userAnswerCorrect > goodResaultPersent){
+            alert(`Правильных ответов: ${correctAnswersCount} ${goodResault}`);
+        } else {
+            alert(`Правильных ответов: ${correctAnswersCount} ${badResault}`);
+        }
+    </script>
+</body>
+</html>
